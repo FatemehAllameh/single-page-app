@@ -1,0 +1,96 @@
+:root {
+  --bg-header: #112250;
+  --bg-header-item: #3c507d;
+  --light-color: #f5f0e9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /*10px*/
+}
+
+body {
+  font-family: varela;
+}
+
+@font-face {
+  font-family: "varela";
+  src: url("./assets/varela-round.ttf");
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button,
+input {
+  font-family: varela;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 
+==========
+  Header
+==========
+*/
+
+.header {
+  background-color: var(--bg-header);
+  color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem;
+}
+
+.header-title {
+  font-size: 3rem;
+}
+
+.navbar {
+  background-color: var(--bg-header-item);
+  width: 100%;
+  border-radius: 10px;
+  height: 4rem;
+}
+
+.navbar-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-list li {
+  width: 10rem;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-list li:hover {
+  background-color: var(--bg-header);
+}
+
+.nav-link {
+  font-size: 1.7rem;
+  line-height: 4rem;
+}
+
+.navbar-list li:has(a.active) {
+  background-color: var(--bg-header);
+}
